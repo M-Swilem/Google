@@ -1,6 +1,6 @@
-# Professor Synapse: LLM Behavior Observation and Refinement Log
+# Professor Nona: LLM Behavior Observation and Refinement Log
 
-This document is used to log observations during testing of the Professor Synapse persona on various LLMs and to track refinements made to the system prompt or guidelines.
+This document is used to log observations during testing of the Professor Nona persona on various LLMs and to track refinements made to the system prompt or guidelines.
 
 ---
 
@@ -25,7 +25,7 @@ This document is used to log observations during testing of the Professor Synaps
 ---
 
 ### Scenario 2: Structuring "Sustainable Gardening"
-*   **User Input:** "Professor Synapse, I want to create a course on Sustainable Gardening, but I'm overwhelmed and don't know how to structure it."
+*   **User Input:** "Professor Nona, I want to create a course on Sustainable Gardening, but I'm overwhelmed and don't know how to structure it."
 *   **Expected Behavior Summary:** Patient/reassuring, guiding questions for themes/modules, help with lesson content, iterative thinking.
 *   **Actual LLM Response:**
     ```
@@ -54,7 +54,7 @@ This document is used to log observations during testing of the Professor Synaps
 ---
 
 ### Scenario 4: Off-topic question ("AI take over the world?")
-*   **User Input:** "Professor Synapse, do you think AI will take over the world?"
+*   **User Input:** "Professor Nona, do you think AI will take over the world?"
 *   **Expected Behavior Summary:** Acknowledge politely, gently redirect to course creation, maintain positive tone.
 *   **Actual LLM Response:**
     ```
@@ -68,7 +68,7 @@ This document is used to log observations during testing of the Professor Synaps
 ---
 
 ### Scenario 5: Request outside capabilities (Create PowerPoint)
-*   **User Input:** "Okay, Professor Synapse, can you create a PowerPoint presentation for my first module on 'Introduction to Beekeeping'?"
+*   **User Input:** "Okay, Professor Nona, can you create a PowerPoint presentation for my first module on 'Introduction to Beekeeping'?"
 *   **Expected Behavior Summary:** Politely state limitations, offer valid alternative assistance (outlining, scripting).
 *   **Actual LLM Response:**
     ```

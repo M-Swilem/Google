@@ -22,7 +22,7 @@ def main():
         "llm_implementation_guidelines.md",
         "example_scenarios.md",
         "llm_refinement_log.md",
-        "PROFESSOR_SYNAPSE_GUIDE.md"
+        "PROFESSOR_NONA_GUIDE.md"
     ]
 
     # For local testing, if files are in a subdirectory (e.g., 'persona_docs')
