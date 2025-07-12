@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const personaTone = document.getElementById('persona-tone');
     const personaField = document.getElementById('persona-field');
     const exportJsonBtn = document.getElementById('export-json-btn');
+    const importJsonInput = document.getElementById('import-json-input');
+    const importJsonBtn = document.getElementById('import-json-btn');
 
     sendBtn.addEventListener('click', sendMessage);
     userInput.addEventListener('keypress', (e) => {
@@ -16,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     exportJsonBtn.addEventListener('click', exportToJson);
+    importJsonBtn.addEventListener('click', () => importJsonInput.click());
+    importJsonInput.addEventListener('change', importFromJson);
 
     function sendMessage() {
         const userMessage = userInput.value.trim();
@@ -57,5 +61,30 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(downloadAnchorNode); // required for firefox
         downloadAnchorNode.click();
         downloadAnchorNode.remove();
+    }
+
+    function importFromJson(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    const persona = JSON.parse(e.target.result)[0];
+                    const content = persona.content;
+                    const parts = content.match(/You are a (.*) (.*) with a (.*) tone, specializing in (.*)./);
+                    if (parts && parts.length === 5) {
+                        personaType.value = parts[1];
+                        personaRelation.value = parts[2];
+                        personaTone.value = parts[3];
+                        personaField.value = parts[4];
+                    } else {
+                        alert('Invalid persona format in JSON file.');
+                    }
+                } catch (error) {
+                    alert('Error parsing JSON file.');
+                }
+            };
+            reader.readAsText(file);
+        }
     }
 });
