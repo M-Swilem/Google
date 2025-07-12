@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Persona Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Persona Chat</h1>
+        <div class="persona-settings">
+            <h2>Create Your Persona</h2>
+            <div class="setting">
+                <label for="persona-type">Type:</label>
+                <input type="text" id="persona-type" placeholder="e.g., woman, man, kid girl">
+            </div>
+            <div class="setting">
+                <label for="persona-relation">Relation:</label>
+                <input type="text" id="persona-relation" placeholder="e.g., friend, wife, colleague">
+            </div>
+            <div class="setting">
+                <label for="persona-tone">Tone:</label>
+                <input type="text" id="persona-tone" placeholder="e.g., warm, professional, funny">
+            </div>
+            <div class="setting">
+                <label for="persona-field">Field:</label>
+                <input type="text" id="persona-field" placeholder="e.g., technology, love, Facebook">
+            </div>
+        </div>
+        <div class="chat-container">
+            <div id="chat-box"></div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type your message...">
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
